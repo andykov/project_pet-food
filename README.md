@@ -1,2 +1,2 @@
-# Gllacy
-Учебный макет "Gllacy" для базового интенсива HTML Academy
+# Покорми Зверя
+![alt text](build/img/logo.svg)
