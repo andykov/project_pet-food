@@ -11,6 +11,7 @@ var gulp = require('gulp'),
 
 var path = {
 	// Сборка
+	root: 'build',
 	build: { 
 		html: 'build/html/',
 		js: 'build/js/',
@@ -54,19 +55,19 @@ gulp.task('webserver', function () {
 		host: 'localhost',
 		port: 9000,
 		logPrefix: "gulp_frontend",
-		// tunnel: true,
-		ui: {
-		    port: 9001
-		}
+		// tunnel: 'food'
     });
-    browserSync.notify("Compiling, please wait!");
+
+    // browserSync.watch('build/**/*.*').on('change', browserSync.reload());
 });
+
+
 
 // Сборка HTML
 gulp.task('html', function () {
 	gulp.src(path.src.html)
 		.pipe(gulp.dest(path.build.html))
-		.pipe(reload({stream:true}));
+		// .pipe(reload({stream:true}));
 });
 
 // Сборка CSS

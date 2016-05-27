@@ -3,41 +3,17 @@
 <head>
 	<meta charset="utf-8">
 	<title>HTML Academy: Глейси</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-	<link href='https://fonts.googleapis.com/css?family=Roboto:400,500,400italic,700,300&subset=latin,cyrillic-ext,cyrillic' rel='stylesheet' type='text/css'>
+	<!-- <meta name="viewport" content="width=640, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<link href='https://fonts.googleapis.com/css?family=Roboto:700,500,400,400italic,300,100&subset=latin,cyrillic-ext,cyrillic' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="../css/libs/swiper.min.css">
 	<link rel="stylesheet" href="../css/style.min.css">
-	<link rel="stylesheet" href="../css/libs/jquery.fullPage.min.css">
+	<!-- <link rel="stylesheet" href="../css/libs/jquery.fullPage.min.css"> -->
 </head>
 <body>
-	<header class="header">
-		<div class="header_left">
-			<img class="logo" src="../img/logo.svg" alt="">
-			<div class="last-reviews">
-				<div class="last-reviews_author">
-					<img src="http://placehold.it/50x50" alt="">
-				</div>
-				<div class="last-reviews_text">
-					<strong class="header-reviews_name">Leon оставил отзыв:</strong>
-					<p>Перестал ссать в тапки после заказа в Покорми зверя </p>
-				</div>
-			</div>
-		</div>
-		<div class="header_right">
-			<a href="tel:+74957402960" class="header-phone">+7(495)740-29-60</a>
-			<div class="social">
-				<a href="#">fb</a>
-				<a href="#">ig</a>
-				<a href="#">vk</a>
-			</div>
-			<div class="header-nav">
-				<a href="#all" class="header-nav_item">Все</a>
-				<a href="#dog" class="header-nav_item">Собаки</a>
-				<a href="#cats" class="header-nav_item active">Кошки</a>
-			</div>
-		</div>
-	</header>
 
-	<div id="fullpage">
+
+<!-- 	<div id="fullpage">
 		<section class="section">
 			<video data-autoplay loop muted id="myVideo">
 				<source src="../video/video-section-1.mp4" type="video/mp4">
@@ -96,29 +72,132 @@
 				</div>
 			</div>
 		</section>
-	</div>
+	</div> -->
 
-	<div class="section-nav">
-		<div class="section-nav_item">
-			<div class="section-nav_img"></div>
-			<span>Персональный менеджер</span>
+
+
+
+	<div class="swiper-container">
+		<header class="header">
+			<div class="header_left">
+				<img class="logo" src="../img/logo.svg" alt="">
+				<div class="last-reviews">
+					<div class="last-reviews_author">
+						<img src="http://placehold.it/50x50" alt="">
+					</div>
+					<div class="last-reviews_text">
+						<strong class="header-reviews_name">Leon оставил отзыв:</strong>
+						<p>Перестал ссать в тапки после заказа в Покорми зверя </p>
+					</div>
+				</div>
+			</div>
+			<div class="header_right">
+				<a href="tel:+74957402960" class="header-phone">+7 (495) 740-29-60</a>
+				<div class="social">
+					<a href="#" class="social_item">fb</a>
+					<a href="#" class="social_item">ig</a>
+					<a href="#" class="social_item">vk</a>
+				</div>
+				<div class="header-nav">
+					<a href="#all" class="header-nav_item">Все</a>
+					<a href="#dog" class="header-nav_item">Собаки</a>
+					<a href="#cats" class="header-nav_item active">Кошки</a>
+				</div>
+			</div>
+		</header>
+
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" data-hash="slide1">
+				<video autoplay loop muted id="myVideo">
+					<source src="../video/video-cats-section-1.mp4" type="video/mp4">
+					<source src="../video/video-cats-section-1.webm" type="video/webm">
+				</video>
+				<div class="section_cont">
+					<h2 class="section_title">Ежемесячная доставка корма для кошек</h2>
+					<div class="section_text">Мы напомним вам, что корм заканчивается и привезем без лишних усилий с вашей стороны.</div>
+					<div class="section_btns">
+						<a href="#" class="btn btn-choose">Выбрать корм</a>
+						<a href="#" class="btn btn--transp btn-client">Я уже клиент</a>
+					</div>
+				</div>
+            </div>
+            <div class="swiper-slide" data-hash="slide2">
+				<div class="section_cont">
+					<h2 class="section_title">Персональный менеджер знает всё</h2>
+					<div class="section_text">Сколько зверь съел в прошлом месяце. Что вы заказывали три месяца назад. Главное, он заранее позвонит вам и спросит, не кончился ли корм и если нужно, скорректирует месячную доставку.</div>
+					<div class="section_btns">
+						<a href="#" class="btn btn-choose">Выбрать корм</a>
+						<a href="#" class="btn btn--transp btn-client">Я уже клиент</a>
+					</div>
+				</div>
+            </div>
+            <div class="swiper-slide" data-hash="slide3">
+				<video id="myVideo2" autobuffer="autobuffer" preload="preload">
+					<source src="../video/video-cats-section-1.mp4" type="video/mp4">
+					<source src="../video/video-cats-section-1.webm" type="video/webm">
+				</video>
+				<div class="section_cont">
+					<h2 class="section_title">Удобная доставка корма</h2>
+					<div class="section_text">Точная доставка в удобное для вас время в фирменной, клевой коробке, в которой удобно хранить корм. Мы можем оставить заказ у консьержа, а вы заберете позже.</div>
+					<div class="section_btns">
+						<a href="#" class="btn btn-choose">Выбрать корм</a>
+						<a href="#" class="btn btn--transp btn-client">Я уже клиент</a>
+					</div>
+				</div>
+            </div>
+            <div class="swiper-slide" data-hash="slide4">
+				<div class="section_cont">
+					<h2 class="section_title">Автоматическая оплата заказа</h2>
+					<div class="section_text">Один раз вводите данные карты и оплата происходит автоматически. Деньги списываются, когда вами принята доставка и подписана накладная. Удобно планировать месячные расходы.</div>
+					<div class="section_btns">
+						<a href="#" class="btn btn-choose">Выбрать корм</a>
+						<a href="#" class="btn btn--transp btn-client">Я уже клиент</a>
+					</div>
+				</div>
+            </div>
+            <div class="swiper-slide" data-hash="slide5">
+				<div class="section_cont">
+					<h2 class="section_title">Приятные сюрпризы</h2>
+					<div class="section_text">В каждой коробке с кормом вы найдете подарок для вашего зверя. И мы обязательно поздравим вашего зверя с днем рождения. Часть дохода мы отправляем приютам для животных.</div>
+					<div class="section_btns">
+						<a href="#" class="btn btn-choose">Выбрать корм</a>
+						<a href="#" class="btn btn--transp btn-client">Я уже клиент</a>
+					</div>
+				</div>
+            </div>
+        </div>
+        <!-- Add Pagination -->
+        <!-- <div class="swiper-pagination"></div> -->
+
+		<div class="section-nav">
+			<div class="section-nav_item">
+				<div class="section-nav_img"></div>
+				<span>Персональный менеджер</span>
+			</div>
+			<div class="section-nav_item active">
+				<div class="section-nav_img"></div>
+				<span>Удобная доставка</span>
+			</div>
+			<div class="section-nav_item">
+				<div class="section-nav_img"></div>
+				<span>Автоматическая оплата</span>
+			</div>
+			<div class="section-nav_item">
+				<div class="section-nav_img"></div>
+				<span>Приятные сюрпризы</span>
+			</div>
 		</div>
-		<div class="section-nav_item active">
-			<div class="section-nav_img"></div>
-			<span>Удобная доставка</span>
-		</div>
-		<div class="section-nav_item">
-			<div class="section-nav_img"></div>
-			<span>Автоматическая оплата</span>
-		</div>
-		<div class="section-nav_item">
-			<div class="section-nav_img"></div>
-			<span>Приятные сюрпризы</span>
-		</div>
-	</div>
+    </div>
+
+
+
+
+
 
 	<script type="text/javascript" src="../js/jquery-2.2.0.min.js"></script>
-	<script type="text/javascript" src="../js/jquery.fullPage.min.js"></script>
+	<script type="text/javascript" src="../js/swiper.min.js"></script>
+	<!-- <script type="text/javascript" src="../js/jquery.fullPage.min.js"></script> -->
+	<!-- <script type="text/javascript" src="../js/jquery.touchSwipe.min.js"></script> -->
 	<!-- <script type="text/javascript" src="../js/jquery.mb.YTPlayer.min.js"></script> -->
 	<script type="text/javascript" src="../js/main.js"></script>
 </body>

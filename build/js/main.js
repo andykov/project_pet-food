@@ -1,65 +1,70 @@
 $(document).ready(function() {
-
-    // $('#fullpage').fullpage();
-
-    $('#fullpage').fullpage({
-				verticalCentered: true,
-				sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE'],
-				// autoScrolling: false,
-				afterRender: function(){
-
-
-					//playing the video
-					$('video').get(0).play();
-				}
+//initialize swiper when document ready  
+    var swiper = new Swiper('.swiper-container', {
+      	// pagination: '.section-nav',
+      	// paginationClickable: true,
+      	// paginationType: 'custom',
+      	// paginationElement: '.section-nav_item',
+		// paginationBulletRender: function (index, className) {
+		// 	var slide_nav_i = $('.section-nav').find('.section-nav_item').index();
+		// 	console.log(slide_nav_i);
+		// 	return '<span class="' + className + '">' + (index + 1) + '</span>';
+		// },
+		// paginationBulletRender: function (index, className) {
+		// 	var slide = $('.' + this.wrapperClass).find('.swiper-slide')[index];
+		// 	return '<span class="' + className + ' ' + $(slide).attr('data-class') + '">' + (index + 1) + '</span>';
+		// },
+		paginationCustomRender: function (swiper, current, total) {
+			$('.section-nav_item').on('click', function(){
+				alert();
 			});
+			return current + ' of ' + total;
+		},
+        direction: 'vertical',
+        slidesPerView: 1,
+        paginationClickable: true,
+        spaceBetween: 30,
+        mousewheelControl: true,
+        hashnav: true
+    })
+
+   //  $('#fullpage').fullpage({
+			// 	verticalCentered: true,
+			// 	sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE'],
+			// 	// autoScrolling: false,
+			// 	afterRender: function(){
+
+
+			// 		//playing the video
+			// 		$('video').get(0).play();
+			// 	}
+			// });
 
 $('.header-nav_item').on('click', function() {
-	if ($(this).attr('href') == '#dog') {
+	// $(this).addClass('active');
+	$(this).addClass('active').siblings().removeClass('active');
+	var myVideo = document.getElementById("myVideo");
 
-		//получим медиа объект в переменную
-		var myVideo = document.getElementById("myVideo");
+	if ($(this).attr('href') == '#dog') {
 		//myVideo.pause(); //не обязательно
-		//установим новый постер для видео
-		// myVideo.poster =  "/img/examples/example2-500x375.jpg";
-		//установим новый видео файл
-		myVideo.src = "../video/video-dog-section-1.mp4";
-		//выполним перезагрузку медиа элемента на странице
-		//не обязательно, т.к. смена src вызывает и перезагрузку
-		myVideo.load();
-		//можно запустить видео на воспроизведение
+		//myVideo.poster =  "/img/examples/example2-500x375.jpg";
+		myVideo.src = "../video/video-dog-section-3.mp4";
+		// myVideo.load();
 		myVideo.play();// если необходимо
 
 	} else if ($(this).attr('href') == '#cats') {
-
-		//получим медиа объект в переменную
-		var myVideo = document.getElementById("myVideo");
 		//myVideo.pause(); //не обязательно
-		//установим новый постер для видео
-		// myVideo.poster =  "/img/examples/example2-500x375.jpg";
-		//установим новый видео файл
+		//myVideo.poster =  "/img/examples/example2-500x375.jpg";
 		myVideo.src = "../video/video-cats-section-1.mp4";
-		//выполним перезагрузку медиа элемента на странице
-		//не обязательно, т.к. смена src вызывает и перезагрузку
-		myVideo.load();
-		//можно запустить видео на воспроизведение
+		// myVideo.load();
 		myVideo.play();// если необходимо
 
 	} else if ($(this).attr('href') == '#all') {
-
-		//получим медиа объект в переменную
-		var myVideo = document.getElementById("myVideo");
 		//myVideo.pause(); //не обязательно
-		//установим новый постер для видео
-		// myVideo.poster =  "/img/examples/example2-500x375.jpg";
-		//установим новый видео файл
+		//myVideo.poster =  "/img/examples/example2-500x375.jpg";
 		myVideo.src = "../video/video-all-section-1.mp4";
-		//выполним перезагрузку медиа элемента на странице
-		//не обязательно, т.к. смена src вызывает и перезагрузку
-		myVideo.load();
-		//можно запустить видео на воспроизведение
+		// myVideo.load();
 		myVideo.play();// если необходимо
-
 	}
 });
 
@@ -70,22 +75,22 @@ $('.header-nav_item').on('click', function() {
 
 
 
-// Выбираем видео элемент
-var vid = document.getElementById('myVideo2');
-//var vid = $('#v0')[0]; // jquery опция
+// // Выбираем видео элемент
+// var vid = document.getElementById('myVideo2');
+// //var vid = $('#v0')[0]; // jquery опция
 
-// остановка видео при загрузке
-vid.pause();
+// // остановка видео при загрузке
+// vid.pause();
 
-// Пошаговое воспроизведение видео при прокрутке страницы
-window.onscroll = function(){
-	vid.pause();
-};
+// // Пошаговое воспроизведение видео при прокрутке страницы
+// window.onscroll = function(){
+// 	vid.pause();
+// };
 
-// Обновления видеокадров для плавного воспроизведения при прокрутке
-setInterval(function(){
-	vid.currentTime = window.pageYOffset/400;
-}, 100);
+// // Обновления видеокадров для плавного воспроизведения при прокрутке
+// setInterval(function(){
+// 	vid.currentTime = window.pageYOffset/400;
+// }, 100);
 
 
 
