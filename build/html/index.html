@@ -3,81 +3,16 @@
 <head>
 	<meta charset="utf-8">
 	<title>HTML Academy: Глейси</title>
-	<!-- <meta name="viewport" content="width=640, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
 	<link href='https://fonts.googleapis.com/css?family=Roboto:700,500,400,400italic,300,100&subset=latin,cyrillic-ext,cyrillic' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="../css/libs/swiper.min.css">
+	<!-- <link rel="stylesheet" href="../css/libs/swiper.min.css"> -->
+	<link rel="stylesheet" href="../css/libs/animate.min.css">
 	<link rel="stylesheet" href="../css/style.min.css">
 	<!-- <link rel="stylesheet" href="../css/libs/jquery.fullPage.min.css"> -->
 </head>
 <body>
 
-
-<!-- 	<div id="fullpage">
-		<section class="section">
-			<video data-autoplay loop muted id="myVideo">
-				<source src="../video/video-section-1.mp4" type="video/mp4">
-				<source src="../video/video-section-1.webm" type="video/webm">
-			</video>
-			<div class="section_cont">
-				<h2 class="section_title">Ежемесячная доставка корма для кошек</h2>
-				<div class="section_text">Мы напомним вам, что корм заканчивается и привезем без лишних усилий с вашей стороны.</div>
-				<div class="section_btns">
-					<a href="#" class="btn">Выбрать корм</a>
-					<a href="#" class="btn btn--transp">Я уже клиент</a>
-				</div>
-			</div>
-		</section>
-		<section class="section">
-			<div class="section_cont">
-				<h2 class="section_title">Персональный менеджер знает всё</h2>
-				<div class="section_text">Сколько зверь съел в прошлом месяце. Что вы заказывали три месяца назад. Главное, он заранее позвонит вам и спросит, не кончился ли корм и если нужно, скорректирует месячную доставку.</div>
-				<div class="section_btns">
-					<a href="#" class="btn">Выбрать корм</a>
-					<a href="#" class="btn btn--transp">Я уже клиент</a>
-				</div>
-			</div>
-		</section>
-		<section class="section">
-			<video id="myVideo2" autobuffer="autobuffer" preload="preload">
-				<source src="../video/video-section-1.mp4" type="video/mp4">
-				<source src="../video/video-section-1.webm" type="video/webm">
-			</video>
-			<div class="section_cont">
-				<h2 class="section_title">Удобная доставка корма</h2>
-				<div class="section_text">Точная доставка в удобное для вас время в фирменной, клевой коробке, в которой удобно хранить корм. Мы можем оставить заказ у консьержа, а вы заберете позже.</div>
-				<div class="section_btns">
-					<a href="#" class="btn">Выбрать корм</a>
-					<a href="#" class="btn btn--transp">Я уже клиент</a>
-				</div>
-			</div>
-		</section>
-		<section class="section">
-			<div class="section_cont">
-				<h2 class="section_title">Автоматическая оплата заказа</h2>
-				<div class="section_text">Один раз вводите данные карты и оплата происходит автоматически. Деньги списываются, когда вами принята доставка и подписана накладная. Удобно планировать месячные расходы.</div>
-				<div class="section_btns">
-					<a href="#" class="btn">Выбрать корм</a>
-					<a href="#" class="btn btn--transp">Я уже клиент</a>
-				</div>
-			</div>
-		</section>
-		<section class="section">
-			<div class="section_cont">
-				<h2 class="section_title">Приятные сюрпризы</h2>
-				<div class="section_text">В каждой коробке с кормом вы найдете подарок для вашего зверя. И мы обязательно поздравим вашего зверя с днем рождения. Часть дохода мы отправляем приютам для животных.</div>
-				<div class="section_btns">
-					<a href="#" class="btn">Выбрать корм</a>
-					<a href="#" class="btn btn--transp">Я уже клиент</a>
-				</div>
-			</div>
-		</section>
-	</div> -->
-
-
-
-
-	<div class="swiper-container">
+	<div class="full swiper-container">
 		<header class="header">
 			<div class="header_left">
 				<img class="logo" src="../img/logo.svg" alt="">
@@ -86,8 +21,10 @@
 						<img src="http://placehold.it/50x50" alt="">
 					</div>
 					<div class="last-reviews_text">
-						<strong class="header-reviews_name">Leon оставил отзыв:</strong>
-						<p>Перестал ссать в тапки после заказа в Покорми зверя </p>
+						<a id="reviews" href="#animatedModal">
+							<strong class="header-reviews_name">Leon оставил отзыв:</strong>
+							<p>Перестал ссать в тапки после заказа в Покорми зверя </p>
+						</a>
 					</div>
 				</div>
 			</div>
@@ -99,18 +36,18 @@
 					<a href="#" class="social_item">vk</a>
 				</div>
 				<div class="header-nav">
-					<a href="#all" class="header-nav_item">Все</a>
-					<a href="#dog" class="header-nav_item">Собаки</a>
-					<a href="#cats" class="header-nav_item active">Кошки</a>
+					<a href="#all" data-src="all" class="header-nav_item">Все</a>
+					<a href="#dog" data-src="dogs" class="header-nav_item">Собаки</a>
+					<a href="#cats" data-src="cats" class="header-nav_item active">Кошки</a>
 				</div>
 			</div>
 		</header>
 
         <div class="swiper-wrapper">
-            <div class="swiper-slide" data-hash="slide1">
-				<video autoplay loop muted id="myVideo">
-					<source src="../video/video-cats-section-1.mp4" type="video/mp4">
-					<source src="../video/video-cats-section-1.webm" type="video/webm">
+            <div class="swiper-slide">
+				<video autoplay loop muted class="bg-video bg-video-s1">
+					<source src="../video/all/video-section-1.mp4" type="video/mp4">
+					<source src="../video/all/video-section-1.webm" type="video/webm">
 				</video>
 				<div class="section_cont">
 					<h2 class="section_title">Ежемесячная доставка корма для кошек</h2>
@@ -121,7 +58,11 @@
 					</div>
 				</div>
             </div>
-            <div class="swiper-slide" data-hash="slide2">
+            <div class="swiper-slide" data-navimg="../img/nav-slide-img-1.svg" data-navtext="Персональный менеджер" data-hash="slide1">
+				<video loop muted class="bg-video bg-video-s2">
+					<source src="../video/all/video-section-2.mp4" type="video/mp4">
+					<source src="../video/all/video-section-2.webm" type="video/webm">
+				</video>
 				<div class="section_cont">
 					<h2 class="section_title">Персональный менеджер знает всё</h2>
 					<div class="section_text">Сколько зверь съел в прошлом месяце. Что вы заказывали три месяца назад. Главное, он заранее позвонит вам и спросит, не кончился ли корм и если нужно, скорректирует месячную доставку.</div>
@@ -131,10 +72,10 @@
 					</div>
 				</div>
             </div>
-            <div class="swiper-slide" data-hash="slide3">
-				<video id="myVideo2" autobuffer="autobuffer" preload="preload">
-					<source src="../video/video-cats-section-1.mp4" type="video/mp4">
-					<source src="../video/video-cats-section-1.webm" type="video/webm">
+            <div class="swiper-slide" data-navimg="../img/nav-slide-img-2.svg" data-navtext="Удобная доставка" data-hash="slide2">
+				<video loop muted class="bg-video bg-video-s3">
+					<source src="../video/all/video-section-3.mp4" type="video/mp4">
+					<source src="../video/all/video-section-3.webm" type="video/webm">
 				</video>
 				<div class="section_cont">
 					<h2 class="section_title">Удобная доставка корма</h2>
@@ -145,7 +86,11 @@
 					</div>
 				</div>
             </div>
-            <div class="swiper-slide" data-hash="slide4">
+            <div class="swiper-slide" data-navimg="../img/nav-slide-img-3.svg" data-navtext="Автоматическая оплата" data-hash="slide3">
+				<video loop muted class="bg-video bg-video-s4">
+					<source src="../video/all/video-section-4.mp4" type="video/mp4">
+					<source src="../video/all/video-section-4.webm" type="video/webm">
+				</video>
 				<div class="section_cont">
 					<h2 class="section_title">Автоматическая оплата заказа</h2>
 					<div class="section_text">Один раз вводите данные карты и оплата происходит автоматически. Деньги списываются, когда вами принята доставка и подписана накладная. Удобно планировать месячные расходы.</div>
@@ -155,7 +100,11 @@
 					</div>
 				</div>
             </div>
-            <div class="swiper-slide" data-hash="slide5">
+            <div class="swiper-slide" data-navimg="../img/nav-slide-img-4.svg" data-navtext="Приятные сюрпризы" data-hash="slide4">
+				<video loop muted class="bg-video bg-video-s5">
+					<source src="../video/all/video-section-5.mp4" type="video/mp4">
+					<source src="../video/all/video-section-5.webm" type="video/webm">
+				</video>
 				<div class="section_cont">
 					<h2 class="section_title">Приятные сюрпризы</h2>
 					<div class="section_text">В каждой коробке с кормом вы найдете подарок для вашего зверя. И мы обязательно поздравим вашего зверя с днем рождения. Часть дохода мы отправляем приютам для животных.</div>
@@ -168,34 +117,89 @@
         </div>
         <!-- Add Pagination -->
         <!-- <div class="swiper-pagination"></div> -->
-
-		<div class="section-nav">
-			<div class="section-nav_item">
-				<div class="section-nav_img"></div>
-				<span>Персональный менеджер</span>
+<div class="slider-reviews-wrap">
+	<div class="container">
+		<h2>заголовок</h2>
+		<div class="slider-reviews">
+			<div class="slider-reviews_item">
+				<div class="row">
+					<div class="col-xs-6"></div>
+					<div class="col-xs-6"></div>
+				</div>
 			</div>
-			<div class="section-nav_item active">
-				<div class="section-nav_img"></div>
-				<span>Удобная доставка</span>
+			<div class="slider-reviews_item">
+				<div class="row">
+					<div class="col-xs-6"></div>
+					<div class="col-xs-6"></div>
+				</div>
 			</div>
-			<div class="section-nav_item">
-				<div class="section-nav_img"></div>
-				<span>Автоматическая оплата</span>
+			<div class="slider-reviews_item">
+				<div class="row">
+					<div class="col-xs-6"></div>
+					<div class="col-xs-6"></div>
+				</div>
 			</div>
-			<div class="section-nav_item">
-				<div class="section-nav_img"></div>
-				<span>Приятные сюрпризы</span>
+			<div class="slider-reviews_item">
+				<div class="row">
+					<div class="col-xs-6"></div>
+					<div class="col-xs-6"></div>
+				</div>
 			</div>
 		</div>
+	</div>
+</div>
+
+		<div class="section-nav swiper-pagination">
+			
+		</div>
+
+		<!-- <div class="section-nav">
+			<div class="section-nav_item slide-to-1">
+				<div class="section-nav_img"><img src="../img/nav-slide-img-1.svg" alt="Персональный менеджер"></div>
+				<span>Персональный менеджер</span>
+			</div>
+			<div class="section-nav_item slide-to-2 active">
+				<div class="section-nav_img"><img src="../img/nav-slide-img-2.svg" alt="Удобная доставка"></div>
+				<span>Удобная доставка</span>
+			</div>
+			<div class="section-nav_item slide-to-3">
+				<div class="section-nav_img"><img src="../img/nav-slide-img-3.svg" alt="Автоматическая оплата"></div>
+				<span>Автоматическая оплата</span>
+			</div>
+			<div class="section-nav_item slide-to-4">
+				<div class="section-nav_img"><img src="../img/nav-slide-img-4.svg" alt="Приятные сюрпризы"></div>
+				<span>Приятные сюрпризы</span>
+			</div>
+		</div> -->
     </div>
 
+    <div id="animatedModal">
+		<div class="close-animatedModal"> 
+            CLOSE MODAL
+        </div>
+            
+        <div class="modal-content">
+			<div class="slider swiper-container">
+		        <div class="swiper-wrapper">
+		            <div class="swiper-slide">Slide 1</div>
+		            <div class="swiper-slide">Slide 2</div>
+		            <div class="swiper-slide">Slide 3</div>
+		        </div>
+		        <div class="swiper-pagination"></div>
+		        <div class="swiper-button-next"></div>
+        		<div class="swiper-button-prev"></div>
+		    </div>
+        </div>
+    </div>
 
+	<button class="btn-up"></button>
 
 
 
 
 	<script type="text/javascript" src="../js/jquery-2.2.0.min.js"></script>
 	<script type="text/javascript" src="../js/swiper.min.js"></script>
+	<script type="text/javascript" src="../js/animatedModal.min.js"></script>
 	<!-- <script type="text/javascript" src="../js/jquery.fullPage.min.js"></script> -->
 	<!-- <script type="text/javascript" src="../js/jquery.touchSwipe.min.js"></script> -->
 	<!-- <script type="text/javascript" src="../js/jquery.mb.YTPlayer.min.js"></script> -->
