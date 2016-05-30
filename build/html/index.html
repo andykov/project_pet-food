@@ -5,10 +5,9 @@
 	<title>HTML Academy: Глейси</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
 	<link href='https://fonts.googleapis.com/css?family=Roboto:700,500,400,400italic,300,100&subset=latin,cyrillic-ext,cyrillic' rel='stylesheet' type='text/css'>
-	<!-- <link rel="stylesheet" href="../css/libs/swiper.min.css"> -->
+	<link rel="stylesheet" href="../css/libs/swiper.min.css">
 	<link rel="stylesheet" href="../css/libs/animate.min.css">
 	<link rel="stylesheet" href="../css/style.min.css">
-	<!-- <link rel="stylesheet" href="../css/libs/jquery.fullPage.min.css"> -->
 </head>
 <body>
 
@@ -43,7 +42,7 @@
 			</div>
 		</header>
 
-        <div class="swiper-wrapper">
+        <div class="full-wrap swiper-wrapper">
             <div class="swiper-slide">
 				<video autoplay loop muted class="bg-video bg-video-s1">
 					<source src="../video/all/video-section-1.mp4" type="video/mp4">
@@ -115,77 +114,54 @@
 				</div>
             </div>
         </div>
-        <!-- Add Pagination -->
-        <!-- <div class="swiper-pagination"></div> -->
-<div class="slider-reviews-wrap">
-	<div class="container">
-		<h2>заголовок</h2>
-		<div class="slider-reviews">
-			<div class="slider-reviews_item">
-				<div class="row">
-					<div class="col-xs-6"></div>
-					<div class="col-xs-6"></div>
-				</div>
-			</div>
-			<div class="slider-reviews_item">
-				<div class="row">
-					<div class="col-xs-6"></div>
-					<div class="col-xs-6"></div>
-				</div>
-			</div>
-			<div class="slider-reviews_item">
-				<div class="row">
-					<div class="col-xs-6"></div>
-					<div class="col-xs-6"></div>
-				</div>
-			</div>
-			<div class="slider-reviews_item">
-				<div class="row">
-					<div class="col-xs-6"></div>
-					<div class="col-xs-6"></div>
+
+		<div class="slider-reviews-wrap">
+			<div class="container">
+				<h2>заголовок</h2>
+				<div class="slider-reviews">
+					<div class="slider-reviews_item">
+						<div class="row">
+							<div class="col-xs-6"></div>
+							<div class="col-xs-6"></div>
+						</div>
+					</div>
+					<div class="slider-reviews_item">
+						<div class="row">
+							<div class="col-xs-6"></div>
+							<div class="col-xs-6"></div>
+						</div>
+					</div>
+					<div class="slider-reviews_item">
+						<div class="row">
+							<div class="col-xs-6"></div>
+							<div class="col-xs-6"></div>
+						</div>
+					</div>
+					<div class="slider-reviews_item">
+						<div class="row">
+							<div class="col-xs-6"></div>
+							<div class="col-xs-6"></div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-</div>
 
-		<div class="section-nav swiper-pagination">
-			
-		</div>
-
-		<!-- <div class="section-nav">
-			<div class="section-nav_item slide-to-1">
-				<div class="section-nav_img"><img src="../img/nav-slide-img-1.svg" alt="Персональный менеджер"></div>
-				<span>Персональный менеджер</span>
-			</div>
-			<div class="section-nav_item slide-to-2 active">
-				<div class="section-nav_img"><img src="../img/nav-slide-img-2.svg" alt="Удобная доставка"></div>
-				<span>Удобная доставка</span>
-			</div>
-			<div class="section-nav_item slide-to-3">
-				<div class="section-nav_img"><img src="../img/nav-slide-img-3.svg" alt="Автоматическая оплата"></div>
-				<span>Автоматическая оплата</span>
-			</div>
-			<div class="section-nav_item slide-to-4">
-				<div class="section-nav_img"><img src="../img/nav-slide-img-4.svg" alt="Приятные сюрпризы"></div>
-				<span>Приятные сюрпризы</span>
-			</div>
-		</div> -->
+		<div class="section-nav swiper-pagination"></div>
     </div>
 
     <div id="animatedModal">
-		<div class="close-animatedModal"> 
-            CLOSE MODAL
-        </div>
+		<div class="close-animatedModal"></div>
             
         <div class="modal-content">
+        	<img class="logo" src="../img/logo.svg" alt="">
 			<div class="slider swiper-container">
-		        <div class="swiper-wrapper">
-		            <div class="swiper-slide">Slide 1</div>
-		            <div class="swiper-slide">Slide 2</div>
-		            <div class="swiper-slide">Slide 3</div>
+		        <div class="slider-wrap swiper-wrapper">
+		            <div class="swiper-slide" data-navimgrev="http://placehold.it/54x54" style="background-image: url('../img/slider-bg-1.jpg');"></div>
+		            <div class="swiper-slide" data-navimgrev="http://placehold.it/54x54" style="background-image: url('../img/slider-bg-1.jpg');"></div>
+		            <div class="swiper-slide" data-navimgrev="http://placehold.it/54x54" style="background-image: url('../img/slider-bg-1.jpg');"></div>
 		        </div>
-		        <div class="swiper-pagination"></div>
+		        <div class="slider-nav swiper-pagination"></div>
 		        <div class="swiper-button-next"></div>
         		<div class="swiper-button-prev"></div>
 		    </div>
@@ -200,9 +176,6 @@
 	<script type="text/javascript" src="../js/jquery-2.2.0.min.js"></script>
 	<script type="text/javascript" src="../js/swiper.min.js"></script>
 	<script type="text/javascript" src="../js/animatedModal.min.js"></script>
-	<!-- <script type="text/javascript" src="../js/jquery.fullPage.min.js"></script> -->
-	<!-- <script type="text/javascript" src="../js/jquery.touchSwipe.min.js"></script> -->
-	<!-- <script type="text/javascript" src="../js/jquery.mb.YTPlayer.min.js"></script> -->
 	<script type="text/javascript" src="../js/main.js"></script>
 </body>
 </html>

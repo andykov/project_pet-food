@@ -6,24 +6,21 @@ $(document).ready(function() {
 		$('.header-phone').removeAttr('href');
 	}
 //initialize swiper when document ready  
-    var swiper = new Swiper('.full.swiper-container', {
+    var swiperSection = new Swiper('.full.swiper-container', {
       	pagination: '.swiper-pagination',
         paginationClickable: true,
         direction: 'vertical',
+        wrapperClass: 'full-wrap',
         bulletClass: 'section-nav_item',
         paginationBulletRender: function (index, className) {
-        	var slide = $('.' + this.wrapperClass).find('.swiper-slide')[index];
-            return '<div class="section-nav_item"><div class="section-nav_img"><img src="' + '../img/' + $(slide).data('navimg') + '"/></div><span>' + $(slide).data('navtext') + '</span></div>';
+        	var swiperSection = $('.' + this.wrapperClass).find('.swiper-slide')[index];
+            return '<div class="section-nav_item"><div class="section-nav_img"><img src="' + '../img/' + $(swiperSection).data('navimg') + '"/></div><span>' + $(swiperSection).data('navtext') + '</span></div>';
         },
         slidesPerView: 1,
-        spaceBetween: 30,
+        // spaceBetween: 30,
         mousewheelControl: true,
         hashnav: true
     });
-
-
-
-
 
 
 $('.btn-up').on('click', function(){
@@ -31,19 +28,33 @@ $('.btn-up').on('click', function(){
 	mySwiper.slideTo(0, 1000);
 });
 
+ $("#reviews").animatedModal();
 
+    var swiperSlider = new Swiper('.slider.swiper-container', {
+    	pagination: '.slider-nav',
+        bulletClass: 'slider-nav_item',
+        wrapperClass: 'slider-wrap',
+        paginationClickable: true,
+        direction: 'horizontal',
+        mousewheelControl: true,
+        nextButton: 'swiper-button-next',
+        prevButton: 'swiper-button-prev',
+        paginationBulletRender: function (index, className) {
+        	var swiperSlider = $('.' + this.wrapperClass).find('.swiper-slide')[index];
+            return '<div class="slider-nav_item"><img src="' + $(swiperSlider).data('navimgrev') + '"/></div>';
+        },
+    });
+$('.swiper-button-next').on('click', function(){
+	swiperSlider.slideNext(1000)
+});
+$('.swiper-button-prev').on('click', function(){
+	swiperSlider.slidePrev(1000)
+});
 // $('.section-nav_item.slide-to-1').on('click', function(){
 // 	mySwiper.slideTo(1, 1000);
 // });
-// $('.section-nav_item.slide-to-2').on('click', function(){
-	
-// });
-// $('.section-nav_item.slide-to-3').on('click', function(){
-	
-// });
-// $('.section-nav_item.slide-to-4').on('click', function(){
-	
-// });
+
+
 
 	// var mySwiper = $('.full.swiper-container')[0].swiper;
 	// var hash = window.location.hash;
@@ -59,27 +70,6 @@ $('.btn-up').on('click', function(){
 	// 	mySwiper.slideTo(4, 1000);
 	// };
 
-	// $(window).on('scroll', function(){
-	// 	var mySwiper = $('.full.swiper-container')[0].swiper;
-	// 	var slideActive = mySwiper.activeIndex;
-	// 	if (slideActive == 1) {
-	// 		console.log('sdfsdfsd');
-	// 	}
-	// });
-
-	// $(window).scroll(function(){
-	// 	if (hash == '#slide1') {
-	// 		$('.section-nav_item.slide-to-1').addClass('active');
-	// 	} else if (hash == '#slide2') {
-	// 		$('.section-nav_item.slide-to-2').addClass('active');
-	// 	} else if (hash == '#slide3') {
-	// 		$('.section-nav_item.slide-to-3').addClass('active');
-	// 	} else if (hash == '#slide4') {
-	// 		$('.section-nav_item.slide-to-4').addClass('active');
-	// 	};
-	// });
-
-
 // $('.section-nav_item').on('click', function() {
 // 	var mySwiper = $('.full.swiper-container')[0].swiper;
 
@@ -87,47 +77,7 @@ $('.btn-up').on('click', function(){
 
 
 
-// 	if ($(this).is('.slide-to-1')) {
-// 		mySwiper.slideTo(1, 1000);
-// 	} else if ($(this).is('.slide-to-2')) {
-// 		mySwiper.slideTo(2, 1000);
-// 	} else if ($(this).is('.slide-to-3')) {
-// 		mySwiper.slideTo(3, 1000);
-// 	} else if ($(this).is('.slide-to-4')) {
-// 		mySwiper.slideTo(4, 1000);
-// 	};
-// });
-
-
-
-    // var swiper = new Swiper('.slider', {
-    // 	pagination: 'section-nav',
-    //     bulletClass: 'section-nav_item',
-    //     paginationClickable: true,
-    //     direction: 'horizontal',
-    //     mousewheelControl: false,
-    //     nextButton: 'swiper-button-next',
-    //     prevButton: 'swiper-button-prev',
-    // });
-
-
-
 // Now you can use all slider methods like
-
-
-    $("#reviews").animatedModal();
-
-   //  $('#fullpage').fullpage({
-			// 	verticalCentered: true,
-			// 	sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE'],
-			// 	// autoScrolling: false,
-			// 	afterRender: function(){
-
-
-			// 		//playing the video
-			// 		$('video').get(0).play();
-			// 	}
-			// });
 
 
 $('.header-nav_item').on('click', function(e) {
@@ -167,10 +117,6 @@ $('.header-nav_item').on('click', function(e) {
 
 
 
-
-
-
-
 // // Выбираем видео элемент
 // var vid = document.getElementById('myVideo2');
 // //var vid = $('#v0')[0]; // jquery опция
@@ -189,11 +135,4 @@ $('.header-nav_item').on('click', function(e) {
 // }, 100);
 
 
-
-    // $("#bgndVideo").YTPlayer();
-
-    // var myPlayer;
-    //     $(function() {
-    //         myPlayer = $('.js-video').YTPlayer();
-    //     });
 });
